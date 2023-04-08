@@ -459,6 +459,11 @@ PrefabInstance:
       objectReference: {fileID: 1152814839}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbc2af59fe7824fcd95e63ebb63f89d4, type: 3}
+--- !u!1 &549558856839316421 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2305275174112115890, guid: dbc2af59fe7824fcd95e63ebb63f89d4, type: 3}
+  m_PrefabInstance: {fileID: 549558856839316420}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3363665220202204267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -511,6 +516,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3363665219200713372, guid: 4a0986180a22a4268b7583ff1fb8c2f5, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 549558856839316421}
+    - target: {fileID: 3363665219200713372, guid: 4a0986180a22a4268b7583ff1fb8c2f5, type: 3}
       propertyPath: playButton
       value: 
       objectReference: {fileID: 574783396}
@@ -531,6 +540,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1377823998, guid: dabe9fc9a7bee4dc89264a86b9a3eb1a, type: 3}
+      propertyPath: maxVertices
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8014881137157660971, guid: dabe9fc9a7bee4dc89264a86b9a3eb1a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -578,6 +591,10 @@ PrefabInstance:
     - target: {fileID: 8014881137157660972, guid: dabe9fc9a7bee4dc89264a86b9a3eb1a, type: 3}
       propertyPath: m_Name
       value: PolygonShape
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014881137157660972, guid: dabe9fc9a7bee4dc89264a86b9a3eb1a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dabe9fc9a7bee4dc89264a86b9a3eb1a, type: 3}

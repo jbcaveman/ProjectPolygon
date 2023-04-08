@@ -1,3 +1,4 @@
 build/
-build_BurstDebugInformation_DoNotShip/
+Temp/
+Logs/
 Library/

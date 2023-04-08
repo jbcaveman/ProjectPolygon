@@ -46,9 +46,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roundTime: 2
+  minVertices: 3
+  maxVertices: 8
   playerPolygon: {fileID: 0}
   gamePolygonPrefab: {fileID: 3101208464087878529, guid: 6445d48ab2b1e4ab6bc9823eda3d2aca, type: 3}
   playButton: {fileID: 0}
+  scoreText: {fileID: 0}
   gameOverMaterial: {fileID: 2100000, guid: 5dff749df037c4deb8535a9fc80dfeeb, type: 2}
 --- !u!114 &7785200013736234170
 MonoBehaviour:

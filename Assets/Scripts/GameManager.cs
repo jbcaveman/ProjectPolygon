@@ -1,22 +1,33 @@
 using System.Collections;
 using UnityEngine.U2D;
 using UnityEngine;
+using TMPro;
 
 [RequireComponent(typeof(SoundEffectManager))]
 public class GameManager : MonoBehaviour
 {
     [SerializeField] float roundTime = 2.0f;
+    [SerializeField] private int minVertices = 3;
+    [SerializeField] private int maxVertices = 10;
     [SerializeField] private PolygonSprite playerPolygon;
     [SerializeField] private PolygonSprite gamePolygonPrefab;
     [SerializeField] private GameObject playButton;
+    [SerializeField] private GameObject scoreText;
     [SerializeField] private Material gameOverMaterial;
 
     private SoundEffectManager _sfxManager;
+    private int _score = 0;
+
+    private void Start()
+    {
+        _sfxManager = GetComponent<SoundEffectManager>();
+    }
 
     #region Public Methods
-    public void PlayGame()
+    public void PlayButtonPressed()
     {
-        if (_sfxManager == null) _sfxManager = GetComponent<SoundEffectManager>();
+        Camera mainCamera = FindObjectOfType<Camera>();
+        scoreText.transform.position = mainCamera.WorldToScreenPoint(playerPolygon.transform.position);
         StartCoroutine(StartRound());
     }
     #endregion
@@ -25,7 +36,9 @@ public class GameManager : MonoBehaviour
     private IEnumerator StartRound()
     {
         playButton.SetActive(false);
-        PolygonSprite polygon = RandomPolygon(3, 8);
+        PolygonSprite polygon = RandomPolygon(minVertices, maxVertices);
+        polygon.maxVertices = maxVertices;
+        playerPolygon.maxVertices = maxVertices;
         polygon.StartScaling(10.0f, 1.0f, roundTime);
         _sfxManager.PlayClip(_sfxManager.roundSound);
 
@@ -38,7 +51,6 @@ public class GameManager : MonoBehaviour
         SpriteShapeRenderer playerRenderer = playerPolygon.GetComponent<SpriteShapeRenderer>();
         Material defaultMaterial = playerRenderer.material;
         gameOverMaterial.color = color;
-        Debug.Log($"playerRenderer.materials: {playerRenderer.materials.Length}");
         playerRenderer.material = gameOverMaterial;
 
         yield return new WaitForSeconds(duration);
@@ -66,16 +78,27 @@ public class GameManager : MonoBehaviour
 
     private void PlayerWon()
     {
-        Debug.Log("Player Won!");
         _sfxManager.PlayClip(_sfxManager.winSound);
         StartCoroutine(FlashPlayerPolygon(Color.green, 2.0f));
+        UpdateScore(true);
     }
 
     private void PlayerLost()
     {
-        Debug.Log("Player Lost!");
         _sfxManager.PlayClip(_sfxManager.loseSound);
         StartCoroutine(FlashPlayerPolygon(Color.red, 2.0f));
+        UpdateScore(false);
+    }
+
+    private void UpdateScore(bool won)
+    {
+        Debug.Log("UpdateScore");
+        TMP_Text textMesh = scoreText.GetComponent<TMP_Text> ();
+        if (textMesh == null) return;
+
+        _score = (won) ? _score + 1 : 0;
+        Debug.Log($"UpdateScore to: {_score}");
+        textMesh.text = (_score > 0) ? _score.ToString() : "";
     }
     #endregion
 }

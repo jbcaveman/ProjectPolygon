@@ -5,7 +5,8 @@ using UnityEngine.U2D;
 [RequireComponent(typeof(SpriteShapeController))]
 public class PolygonSprite : MonoBehaviour
 {
-    public int defaultVertices;
+    public int defaultVertices = 6;
+    public int maxVertices = 10;
     public Vector3 startPos;
 
     private SpriteShapeController _spriteController;
@@ -25,7 +26,7 @@ public class PolygonSprite : MonoBehaviour
     #region Public Methods
     public void incrementPolygon(bool increment)
     {
-        _vertices = _vertices + (increment ? 1 : -1);
+        _vertices = Mathf.Min(maxVertices, _vertices + (increment ? 1 : -1));
         if (_vertices < 2) UnsetPolygon();
         else SetPolygon(_vertices, startPos);
     }

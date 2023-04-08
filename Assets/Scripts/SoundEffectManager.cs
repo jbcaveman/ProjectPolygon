@@ -10,12 +10,9 @@ public class SoundEffectManager : MonoBehaviour
 
     [SerializeField] private AudioSource sfxSource;
 
-    /// Use this method for short clips with volume control & 3D sound
     public void PlayClip(AudioClip clip, float volume = 0.5f)
     {
         if (clip == null) return;
-
-        Debug.Log($"PlayOnce: {clip.name}, at {volume}");
 
         AudioSource audioSource = CreateAudioSourceWith(clip, volume);
         audioSource.Play();
@@ -30,11 +27,5 @@ public class SoundEffectManager : MonoBehaviour
         audioSource.volume = volume;
         audioSource.loop = false;
         return audioSource;
-    }
-
-    public void StopPlaying(AudioSource source)
-    {
-        source.Stop();
-        Destroy(source.gameObject);
     }
 }

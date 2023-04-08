@@ -19,7 +19,6 @@ public class InputHandler : MonoBehaviour
 
         if (DoubleTapDetected())
         {
-            Debug.Log("DoubleTapDetected");
             Touch touch = Input.GetTouch(0);
             DetectHitAt(touch.position);
         }
@@ -44,8 +43,6 @@ public class InputHandler : MonoBehaviour
     {
         if (Input.touchCount > 0)
         {
-            Debug.Log("Tap Detected");
-
             if (Input.GetTouch(0).tapCount == 2) return true;
             else return false;
         }
