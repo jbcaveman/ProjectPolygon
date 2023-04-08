@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{51225F2C-34BA-C733-7BE9-A41E0E2759E9}|">
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="Assets/Scripts/DrawPolygon.cs" Line="56" Column="35" />
+      <File FileName="Assets/Scripts/InputHandler.cs" Line="7" Column="57" />
+      <File FileName="Assets/GameManager.cs" Line="44" Column="9" />
+      <File FileName="Assets/Scripts/NewClass.cs" Line="24" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ProjectPolygon" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="PolygonSprite.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0b93fa0d-0627-472b-997b-bb8afb544d81" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 8014881137157660971}
   - component: {fileID: 8014881137157660970}
   - component: {fileID: 8014881137157660973}
-  - component: {fileID: 8014881137157660968}
   - component: {fileID: 8014881137157660969}
+  - component: {fileID: 3101208464087878529}
   m_Layer: 0
-  m_Name: PolygonShape
+  m_Name: GamePolygon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,8 +55,8 @@ SpriteShapeRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3e9a0557ee7004551bee2a3ecc481db2, type: 2}
-  - {fileID: 2100000, guid: 93513a064873546018b3c8435141c219, type: 2}
+  - {fileID: 2100000, guid: fe733b1630fde473895fb757e792f513, type: 2}
+  - {fileID: 2100000, guid: 47a1222aa0be1492e9dc9dda74348f9d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -77,22 +77,13 @@ SpriteShapeRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_MaskInteraction: 0
-  m_ShapeTexture: {fileID: 2800000, guid: ce4d5692708f34a3a91c1dc0e238fe94, type: 3}
-  m_Sprites:
-  - {fileID: 21300000, guid: 9c8bf6eafe78743588763a220b551270, type: 3}
-  - {fileID: 21300000, guid: 9c8bf6eafe78743588763a220b551270, type: 3}
-  - {fileID: 21300000, guid: 9c8bf6eafe78743588763a220b551270, type: 3}
-  - {fileID: 21300000, guid: 9c8bf6eafe78743588763a220b551270, type: 3}
-  - {fileID: 21300000, guid: 9c8bf6eafe78743588763a220b551270, type: 3}
-  - {fileID: 21300000, guid: 9c8bf6eafe78743588763a220b551270, type: 3}
-  - {fileID: 21300000, guid: 9c8bf6eafe78743588763a220b551270, type: 3}
-  - {fileID: 21300000, guid: 9c8bf6eafe78743588763a220b551270, type: 3}
-  - {fileID: 21300000, guid: 9c8bf6eafe78743588763a220b551270, type: 3}
+  m_ShapeTexture: {fileID: 2800000, guid: 9c8bf6eafe78743588763a220b551270, type: 3}
+  m_Sprites: []
   m_LocalAABB:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 1.0625002, y: 1.0625002, z: 0}
+    m_Extent: {x: 1, y: 1, z: 0}
 --- !u!114 &8014881137157660973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,7 +139,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-  m_SpriteShape: {fileID: 11400000, guid: fe9ea6cda822345de9df4aeee7b995fe, type: 2}
+  m_SpriteShape: {fileID: 11400000, guid: 2d38765d4e2414d269d371be5ca95902, type: 2}
   m_FillPixelPerUnit: 256
   m_StretchTiling: 1
   m_SplineDetail: 4
@@ -164,20 +155,6 @@ MonoBehaviour:
   m_EnableTangents: 0
   m_GeometryCached: 0
   m_UTess2D: 1
---- !u!114 &8014881137157660968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8014881137157660972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79cae99912f744959926ecf3ca36bd52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultVertices: 6
-  defaultPos: {x: 1, y: 0, z: 0}
 --- !u!60 &8014881137157660969
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -203,10 +180,24 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1.0625002, y: -1.0625}
-      - {x: -1.0625, y: 1.0625002}
-      - {x: 1.0625002, y: 1.0625}
-      - {x: 1.0625, y: -1.0625002}
-      - {x: -0.5625, y: -1.0625}
-      - {x: -0.9375001, y: -1.0625}
-      - {x: -1.0625002, y: -1.0625}
+    - - {x: -1, y: -1}
+      - {x: -1, y: 1}
+      - {x: 1, y: 1}
+      - {x: 1, y: -1}
+      - {x: 0.4814814, y: -0.9999999}
+      - {x: -0.48148155, y: -1}
+      - {x: -1, y: -1}
+--- !u!114 &3101208464087878529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8014881137157660972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082e33fd6d6ce40c4aef1f21170ea0a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultVertices: 6
+  startPos: {x: 1, y: 0, z: 0}

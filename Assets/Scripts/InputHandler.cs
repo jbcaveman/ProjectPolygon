@@ -1,11 +1,11 @@
-using System.Collections.Generic;
+using System.Collections;
 using UnityEngine.U2D;
 using UnityEngine;
 
 public class InputHandler : MonoBehaviour
 {
     [SerializeField] private float doubleClickTolerance;
-    private bool alreadyClicked = false;
+    private bool _alreadyClicked = false;
 
     #region Lifecycle
     void Update()
@@ -26,11 +26,12 @@ public class InputHandler : MonoBehaviour
     }
     #endregion
 
+
     #region InputDetection
     private bool DoubleClickDetected()
     {
         if (Input.GetMouseButtonDown(0))
-            if (alreadyClicked) return true;
+            if (_alreadyClicked) return true;
             else
             {
                 StartCoroutine(WaitForDoubleClick());
@@ -51,11 +52,11 @@ public class InputHandler : MonoBehaviour
         else return false;
     }
 
-    private IEnumerator<WaitForSeconds> WaitForDoubleClick()
+    private IEnumerator WaitForDoubleClick()
     {
-        alreadyClicked = true;
+        _alreadyClicked = true;
         yield return new WaitForSeconds(doubleClickTolerance);
-        alreadyClicked = false;
+        _alreadyClicked = false;
     }
 
     private void DetectHitAt(Vector2 position)
@@ -67,6 +68,7 @@ public class InputHandler : MonoBehaviour
         }
     }
     #endregion
+
 
     #region Actions
     private void SetRandomColorFor(Material material)

@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3363665219200713373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3363665219200713363}
+  - component: {fileID: 3363665219200713372}
+  - component: {fileID: 7785200013736234170}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3363665219200713363
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3363665219200713373}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.028061852, y: 0.11433728, z: -0.029009866}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3363665219200713372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3363665219200713373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cc3f6b9bf5374069ac286829355e582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roundTime: 2
+  playerPolygon: {fileID: 0}
+  gamePolygonPrefab: {fileID: 3101208464087878529, guid: 6445d48ab2b1e4ab6bc9823eda3d2aca, type: 3}
+  playButton: {fileID: 0}
+  gameOverMaterial: {fileID: 2100000, guid: 5dff749df037c4deb8535a9fc80dfeeb, type: 2}
+--- !u!114 &7785200013736234170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3363665219200713373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eca4d52fbd2f4c699ea5417718c48d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roundSound: {fileID: 8300000, guid: c4ace9777a2104eac8bb03e229c7e53c, type: 3}
+  winSound: {fileID: 8300000, guid: 7b114664d295149b18df1e2f75f8b1b4, type: 3}
+  loseSound: {fileID: 8300000, guid: 01c8fc617b30a40f5a2a8933c04a8d89, type: 3}
+  sfxSource: {fileID: 2315678958814310126, guid: 568e0ec32fd284da88ccfeff42ffb21f, type: 3}
