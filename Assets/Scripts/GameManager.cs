@@ -102,12 +102,10 @@ public class GameManager : MonoBehaviour
 
     private void UpdateScore(bool won)
     {
-        Debug.Log("UpdateScore");
         TMP_Text textMesh = scoreText.GetComponent<TMP_Text> ();
         if (textMesh == null) return;
 
         _score = (won) ? _score + 1 : 0;
-        Debug.Log($"UpdateScore to: {_score}");
         textMesh.text = (_score > 0) ? _score.ToString() : "";
     }
     #endregion
