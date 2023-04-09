@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator ShowPlayButtonAfter(float delay)
     {
         yield return new WaitForSeconds(delay);
-        _sfxManager.PlayClip(_sfxManager.playButtonSound);
+        _sfxManager.PlayClip(_sfxManager.playButtonSound, 0.9f);
         playButton.SetActive(true);
     }
 

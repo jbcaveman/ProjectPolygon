@@ -209,5 +209,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultVertices: 6
-  maxVertices: 10
+  maxVertices: 16
   startPos: {x: 1, y: 0, z: 0}
