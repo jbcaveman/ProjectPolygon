@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roundTime: 2
+  playDelayTime: 15
   minVertices: 3
   maxVertices: 8
   playerPolygon: {fileID: 0}
@@ -68,4 +69,5 @@ MonoBehaviour:
   roundSound: {fileID: 8300000, guid: c4ace9777a2104eac8bb03e229c7e53c, type: 3}
   winSound: {fileID: 8300000, guid: 7b114664d295149b18df1e2f75f8b1b4, type: 3}
   loseSound: {fileID: 8300000, guid: 01c8fc617b30a40f5a2a8933c04a8d89, type: 3}
+  playButtonSound: {fileID: 8300000, guid: 83426bc85677949c3bb357b156c05ed8, type: 3}
   sfxSource: {fileID: 2315678958814310126, guid: 568e0ec32fd284da88ccfeff42ffb21f, type: 3}

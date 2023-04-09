@@ -1,10 +1,9 @@
 ﻿<Properties StartupConfiguration="{51225F2C-34BA-C733-7BE9-A41E0E2759E9}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SoundEffectManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/DrawPolygon.cs" Line="25" Column="1" />
       <File FileName="Assets/Scripts/InputHandler.cs" Line="10" Column="22" />
-      <File FileName="Assets/GameManager.cs" Line="27" Column="36" />
-      <File FileName="Assets/Scripts/NewClass.cs" Line="15" Column="34" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="17" Column="56" />
+      <File FileName="Assets/Scripts/SoundEffectManager.cs" Line="10" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,7 +21,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0b93fa0d-0627-472b-997b-bb8afb544d81" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="864e9aca-7973-4d43-a9e9-19dc8daee81a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

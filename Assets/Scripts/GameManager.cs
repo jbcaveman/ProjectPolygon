@@ -7,6 +7,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] float roundTime = 2.0f;
+    [SerializeField] float playDelayTime = 20.0f;
     [SerializeField] private int minVertices = 3;
     [SerializeField] private int maxVertices = 10;
     [SerializeField] private PolygonSprite playerPolygon;
@@ -21,6 +22,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _sfxManager = GetComponent<SoundEffectManager>();
+        playButton.SetActive(false);
+        StartCoroutine(ShowPlayButtonAfter(playDelayTime));
     }
 
     #region Public Methods
@@ -33,6 +36,13 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region Private Methods
+    private IEnumerator ShowPlayButtonAfter(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        _sfxManager.PlayClip(_sfxManager.playButtonSound);
+        playButton.SetActive(true);
+    }
+
     private IEnumerator StartRound()
     {
         playButton.SetActive(false);

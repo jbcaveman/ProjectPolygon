@@ -7,6 +7,7 @@ public class SoundEffectManager : MonoBehaviour
     public AudioClip roundSound;
     public AudioClip winSound;
     public AudioClip loseSound;
+    public AudioClip playButtonSound;
 
     [SerializeField] private AudioSource sfxSource;
 
