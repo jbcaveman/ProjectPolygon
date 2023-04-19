@@ -3,6 +3,9 @@ using UnityEngine.U2D;
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// The master controller for game actions
+/// </summary>
 [RequireComponent(typeof(SoundEffectManager))]
 public class GameManager : MonoBehaviour
 {
@@ -27,6 +30,9 @@ public class GameManager : MonoBehaviour
     }
 
     #region Public Methods
+    /// <summary>
+    /// Called when the player presses the button intended to initiate a round
+    /// </summary>
     public void PlayButtonPressed()
     {
         Camera mainCamera = FindObjectOfType<Camera>();

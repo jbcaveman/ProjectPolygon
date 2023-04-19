@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Currently stores and plays all sound effects in the game 
+/// </summary>
 public class SoundEffectManager : MonoBehaviour
 {
     public AudioClip roundSound;
@@ -9,6 +12,11 @@ public class SoundEffectManager : MonoBehaviour
 
     [SerializeField] private AudioSource sfxSource;
 
+    /// <summary>
+    /// Play the specified audio clip once at the desired volume 
+    /// </summary>
+    /// <param name="clip">The AudioClip to play</param>
+    /// <param name="volume">The volume at which to play it</param>
     public void PlayClip(AudioClip clip, float volume = 0.5f)
     {
         if (clip == null) return;

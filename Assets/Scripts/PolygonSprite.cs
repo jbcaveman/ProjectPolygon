@@ -2,6 +2,9 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.U2D;
 
+/// <summary>
+/// Creates and renders a 2D polygon using a SpriteShapeController
+/// </summary>
 [RequireComponent(typeof(SpriteShapeController))]
 public class PolygonSprite : MonoBehaviour
 {
@@ -24,6 +27,10 @@ public class PolygonSprite : MonoBehaviour
 
 
     #region Public Methods
+    /// <summary>
+    /// Change the polygon's vertex count by one
+    /// </summary>
+    /// <param name="increment">Increases the count if true, decreases if false</param>
     public void incrementPolygon(bool increment)
     {
         _vertices = Mathf.Min(maxVertices, _vertices + (increment ? 1 : -1));
@@ -31,17 +38,30 @@ public class PolygonSprite : MonoBehaviour
         else SetPolygon(_vertices, startPos);
     }
 
+    /// <summary>
+    /// Get the vertex count of the currently generated polygon
+    /// </summary>
+    /// <returns></returns>
     public int NumberOfVertices()
     {
         return _spriteController.spline.GetPointCount();
     }
 
+    /// <summary>
+    /// Begin the gradual animated scaling of the polygon
+    /// </summary>
+    /// <param name="start">The tranform scale factor at which to start</param>
+    /// <param name="target">The tranform scale factor at which to stop</param>
+    /// <param name="duration">The length of time to scale from start to stop</param>
     public void StartScaling(float start, float target, float duration)
     {
         transform.localScale = new(start, start, start);
         StartCoroutine(ScaleOverTime(start, target, duration));
     }
 
+    /// <summary>
+    /// Stops the animated scaling of the polygon, leaving the scale at it's current value
+    /// </summary>
     public void StopScaling()
     {
         _shouldScale = false;

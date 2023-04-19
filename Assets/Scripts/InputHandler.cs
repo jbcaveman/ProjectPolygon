@@ -2,6 +2,9 @@ using System.Collections;
 using UnityEngine.U2D;
 using UnityEngine;
 
+/// <summary>
+/// Handles clicks and taps to trigger runtime actions
+/// </summary>
 public class InputHandler : MonoBehaviour
 {
     [SerializeField] private float doubleClickTolerance;
