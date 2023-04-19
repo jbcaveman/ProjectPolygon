@@ -50,8 +50,8 @@ public class PolygonSprite : MonoBehaviour
     /// <summary>
     /// Begin the gradual animated scaling of the polygon
     /// </summary>
-    /// <param name="start">The tranform scale factor at which to start</param>
-    /// <param name="target">The tranform scale factor at which to stop</param>
+    /// <param name="start">The transform scale factor at which to start</param>
+    /// <param name="target">The transform scale factor at which to stop</param>
     /// <param name="duration">The length of time to scale from start to stop</param>
     public void StartScaling(float start, float target, float duration)
     {
